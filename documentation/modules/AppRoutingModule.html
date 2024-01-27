@@ -1,0 +1,241 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ecommerce-a documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">ecommerce-a documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content module">
+                   <div class="content-data">
+
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">Modules</li>
+    <li class="breadcrumb-item" >AppRoutingModule</li>
+</ol>
+
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a href="#info" 
+            class="nav-link"
+            class="nav-link active"
+            role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+    </li>
+    <li class="nav-item">
+        <a href="#source" 
+            class="nav-link"
+            
+            role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/app-routing.module.ts</code>
+        </p>
+
+
+
+
+
+        <div class="container-fluid module">
+            <div class="row">
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
+import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
+import { BarraComponent } from &#x27;./componenti/barra/barra.component&#x27;;
+import { LoginComponent } from &#x27;./componenti/login/login.component&#x27;;
+import { HomeComponent } from &#x27;./componenti/home/home.component&#x27;;
+import { ContattiComponent } from &#x27;./componenti/contatti/contatti.component&#x27;;
+import { InfoComponent } from &#x27;./componenti/info/info.component&#x27;;
+import { CarrelloComponent } from &#x27;./componenti/carrello/carrello.component&#x27;;
+import { OrdiniComponent } from &#x27;./componenti/ordini/ordini.component&#x27;;
+import { RegistrazioneComponent } from &#x27;./componenti/registrazione/registrazione.component&#x27;;
+import { AggiungiprodottoComponent } from &#x27;./componenti/aggiungiprodotto/aggiungiprodotto.component&#x27;;
+import { AggiungiquantitaComponent } from &#x27;./componenti/aggiungiquantita/aggiungiquantita.component&#x27;;
+import { CercanomeComponent } from &#x27;./componenti/cercanome/cercanome.component&#x27;;
+import { CercabrcodeComponent } from &#x27;./componenti/cercabrcode/cercabrcode.component&#x27;;
+import { AuthGuard } from &#x27;src/auth/keyguard&#x27;;
+import { VisualizzatuttiComponent } from &#x27;./componenti/visualizzatutti/visualizzatutti.component&#x27;;
+import { ProdottoEditService } from &#x27;./prodotto-edit.service&#x27;;
+import { CreanuovaTipologiaComponent } from &#x27;./creanuova-tipologia/creanuova-tipologia.component&#x27;;
+import { VediprodottoComponent } from &#x27;./componenti/vediprodotto/vediprodotto.component&#x27;;
+import { ProdottoserviceTsComponent } from &#x27;./servcie/prodottoservice.ts/prodottoservice.ts.component&#x27;;
+import { AcquistaComponent } from &#x27;./componenti/acquista/acquista.component&#x27;;
+import { AcquistaprodottoserviceService } from &#x27;./acquistaprodottoservice.service&#x27;;
+import { ConfermaordineComponent } from &#x27;./componenti/confermaordine/confermaordine.component&#x27;;
+import { ConfermaprodottoComponent } from &#x27;./componenti/confermaprodotto/confermaprodotto.component&#x27;;
+import { AllordiniComponent } from &#x27;./componenti/allordini/allordini.component&#x27;;
+import { ErroreComponent } from &#x27;./componenti/errore/errore.component&#x27;;
+import { ReclamoComponent } from &#x27;./componenti/reclamo/reclamo.component&#x27;;
+import { ErroreclamoComponent } from &#x27;./componenti/erroreclamo/erroreclamo.component&#x27;;
+import { ConfermareclamoComponent } from &#x27;./componenti/confermareclamo/confermareclamo.component&#x27;;
+import { AllreclamiComponent } from &#x27;./componenti/allreclami/allreclami.component&#x27;;
+import { DettagliComponent } from &#x27;./componenti/dettagli/dettagli.component&#x27;;
+import { ResiComponent } from &#x27;./componenti/resi/resi.component&#x27;;
+import { ConfermacontattoComponent } from &#x27;./conferme/confermacontatto/confermacontatto.component&#x27;;
+import { CofermaresoComponent } from &#x27;./conferme/cofermareso/cofermareso.component&#x27;;
+import { ErroreresoComponent } from &#x27;./conferme/errorereso/errorereso.component&#x27;;
+
+const routes: Routes &#x3D; [
+  {path: &#x27;login&#x27;, component: LoginComponent},
+  {path: &#x27;&#x27;, component: HomeComponent},
+  { path: &#x27;contattaci&#x27;, component: ContattiComponent },
+  { path: &#x27;chi-siamo&#x27;, component: InfoComponent },
+  { path: &#x27;carrello&#x27;, component: CarrelloComponent,canActivate: [AuthGuard],data:{roles : [&#x27;Utente&#x27;]} },
+  { path: &#x27;ordini&#x27;, component: OrdiniComponent,canActivate: [AuthGuard],data:{roles : [&#x27;Utente&#x27;]}},
+  { path: &#x27;registrazione&#x27;, component: RegistrazioneComponent},
+  { path: &#x27;aggiungiprodotto&#x27;, component: AggiungiprodottoComponent,canActivate: [AuthGuard],data:{roles : [&#x27;Admin&#x27;]},
+  resolve:{
+    prodotto:ProdottoEditService
+  }},
+  { path: &#x27;creanuovatipologia&#x27;, component: CreanuovaTipologiaComponent},
+  { path: &#x27;aggiungiquantita&#x27;, component: AggiungiquantitaComponent,canActivate: [AuthGuard],data:{roles : [&#x27;Admin&#x27;]}},
+  { path: &#x27;cercanome&#x27;, component: CercanomeComponent,canActivate: [AuthGuard],data:{roles : [&#x27;Admin&#x27;]}},
+  { path: &#x27;cercabrcode&#x27;, component: CercabrcodeComponent,canActivate: [AuthGuard],data:{roles : [&#x27;Admin&#x27;]}},
+  { path: &#x27;visualizzatutti&#x27;, component: VisualizzatuttiComponent,canActivate: [AuthGuard],data:{roles : [&#x27;Admin&#x27;]}},
+  { path: &#x27;dettagliprodotto&#x27;, component: VediprodottoComponent,resolve:{prodotto :ProdottoEditService}},
+  { path: &#x27;acquistaora&#x27;, component: AcquistaComponent,canActivate: [AuthGuard],data:{roles : [&#x27;Utente&#x27;]},
+  resolve:{dettagliprodotto :AcquistaprodottoserviceService}},
+  { path: &quot;carrello&quot;,component: CarrelloComponent,canActivate: [AuthGuard],data: { roles: [&quot;Utente&quot;] }},
+  {path:&quot;confermaordine&quot;,component: ConfermaordineComponent,canActivate: [AuthGuard],data: { roles: [&quot;Utente&quot;] } },
+  {path:&quot;Ordini&quot;,component:OrdiniComponent ,canActivate: [AuthGuard], data: { roles: [&quot;Utente&quot;] }},
+  {path:&quot;allordini&quot;,component:AllordiniComponent ,canActivate: [AuthGuard], data: { roles: [&quot;Admin&quot;] }},
+  {path:&quot;confermaprodotto&quot;,component: ConfermaprodottoComponent,canActivate: [AuthGuard],data: { roles: [&quot;Admin&quot;] } },
+  {path:&quot;errore&quot;,component: ErroreComponent },
+  {path:&quot;reclamo/:id&quot;,component: ReclamoComponent,canActivate: [AuthGuard],data: { roles: [&quot;Utente&quot;] }  },
+  {path:&quot;erroreclamo&quot;,component: ErroreclamoComponent },
+  {path:&quot;confermareclamo&quot;,component: ConfermareclamoComponent },
+  {path:&quot;allreclami&quot;,component: AllreclamiComponent,canActivate: [AuthGuard],data: { roles: [&quot;Admin&quot;] } },
+  {path:&quot;dettagli&quot;,component: DettagliComponent},
+  {path:&quot;resi&quot;,component: ResiComponent},
+  {path:&quot;confermacontatto&quot;,component: ConfermacontattoComponent},
+  {path:&quot;confermareso&quot;,component: CofermaresoComponent},
+  {path:&quot;confermareclamo&quot;,component: ConfermareclamoComponent},
+  {path:&quot;errorereso&quot;,component: ErroreresoComponent},
+
+
+
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
+            var COMPODOC_CURRENT_PAGE_URL = 'AppRoutingModule.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

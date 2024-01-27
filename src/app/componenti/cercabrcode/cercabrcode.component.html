@@ -1,0 +1,63 @@
+<mat-card>
+  <mat-card-content>
+    <mat-form-field>
+      <input matInput placeholder="Inserisci il codice a barre" [(ngModel)]="barcode">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="searchProductByBarcode()">Cerca</button>
+  </mat-card-content>
+</mat-card>
+
+<mat-card *ngIf="product">
+  <mat-card-content>
+    <table class="product-table">
+      <tr>
+        <th>ID</th>
+        <td>{{ product.id }}</td>
+      </tr>
+      <tr>
+        <th>Nome</th>
+        <td>{{ product.nome }}</td>
+      </tr>
+      <tr>
+        <th>Descrizione</th>
+        <td>{{ product.descrizione }}</td>
+      </tr>
+      <tr>
+        <th>Prezzo</th>
+        <td>{{ product.prezzo }}</td>
+      </tr>
+      <tr>
+        <th>Quantità</th>
+        <td>{{ product.quantita }}</td>
+      </tr>
+      <tr>
+        <th>Marca</th>
+        <td>{{ product.brend }}</td>
+      </tr>
+      <tr>
+        <th>Immagini</th>
+        <td>
+          <button mat-icon-button color="primary" (click)="showimmagine(product)">
+            <mat-icon>photo</mat-icon>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <th>Elimina</th>
+        <td>
+          <button mat-icon-button color="primary" (click)="eliminaprodotto(product.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <th>Modifica</th>
+        <td>
+          <button mat-icon-button color="warn" (click)="editproduct(product.id)">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </mat-card-content>
+</mat-card>

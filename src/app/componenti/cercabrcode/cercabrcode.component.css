@@ -1,0 +1,17 @@
+.product-table {
+  width: 100%;
+}
+
+.product-table th,
+.product-table td {
+  padding: 8px;
+  text-align: left;
+}
+
+.product-table th {
+  width: 120px;
+}
+
+.product-table td {
+  vertical-align: top;
+}

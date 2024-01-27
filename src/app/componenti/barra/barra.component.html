@@ -1,0 +1,135 @@
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<nav class="menu">
+  <div class="menu-links">
+    <button *ngIf="isLoggedIn" type="button" (click)="logout()">Log out</button>
+    <button *ngIf="!isLoggedIn" type="button" (click)="login()">Log in</button>
+    <button *ngIf="!isLoggedIn" type="button" (click)="register()">Registrati</button>
+
+    <ng-container *ngIf="userProfile">
+      <table>
+        <tr *ngIf="userProfile.username">
+          <span class="username" *ngIf="isLoggedIn && !showResults">
+            <i class="material-icons">person</i>
+            Benvenuto {{ userProfile?.username }}
+          </span>
+        </tr>
+      </table>
+    </ng-container>
+
+
+    <a mat-button *ngIf="!isAdmin" (click)="handleOrdersClick()" [routerLink]="isLoggedIn ? 'ordini' : null">
+      Ordini
+    </a>
+
+    <div *ngIf="showLoginMessage">
+      Loggati per poter visualizzare gli ordini.
+    </div>
+
+
+    <ng-container *ngIf="!isAdmin">
+      <a mat-button routerLink="/carrello">
+        <mat-icon>shopping_cart</mat-icon> Carrello
+      </a>
+    </ng-container>
+
+    <ng-container *ngIf="isAdmin">
+      <a mat-button [matMenuTriggerFor]="prodottiMenu">
+        Prodotti
+      </a>
+      <mat-menu #prodottiMenu="matMenu">
+        <button mat-menu-item  (click)="resetPage()"    routerLink="/aggiungiprodotto">Aggiungi nuovo prodotto</button>
+        <button mat-menu-item   (click)="resetPage()"  routerLink="/aggiungiquantita">Aggiungi quantità</button>
+        <button mat-menu-item   (click)="resetPage()" routerLink="/cercanome" >Cerca prodotto per nome</button>
+        <button mat-menu-item  (click)="resetPage()" routerLink="/cercabrcode" >Cerca prodotto per barcode</button>
+        <button mat-menu-item  (click)="resetPage()" routerLink="/visualizzatutti" >Visualizza tutti</button>
+        <button mat-menu-item  (click)="resetPage()" routerLink="/resi">Resi</button>
+      </mat-menu>
+      <a mat-button color="primary" (click)="resetPage()" routerLink="/creanuovatipologia"  >
+        Crea tipologia
+      </a>
+      <a mat-button color="primary" (click)="resetPage()" routerLink="/allordini" >
+        Ordini
+      </a>
+      <a mat-button color="primary" (click)="resetPage()" routerLink="/allreclami" >
+        Reclami
+      </a>
+    </ng-container>
+    <a mat-button color="primary" routerLink="" (click)="resetPage2()">
+      Home
+    </a>
+    </div>
+
+
+
+
+
+
+
+
+  <div class="search-bar" *ngIf="isAdmin">
+    <mat-form-field appearance="fill" class="custom-search-field">
+      <input matInput placeholder="Ricerca un cliente..." [(ngModel)]="searchText" />
+    </mat-form-field>
+
+    <mat-select placeholder="Opzioni di ricerca" [(ngModel)]="selectedOption" class="custom-dropdown custom-select">
+      <mat-option value="username">Cerca per username</mat-option>
+      <mat-option value="email">Cerca per email</mat-option>
+      <mat-option value="data">Cerca per data antecedente</mat-option>
+      <mat-option value="tutti">Visualizza tutti</mat-option>
+    </mat-select>
+
+
+
+    <button mat-raised-button color="primary" (click)="search()" class="custom-search-button">Cerca</button>
+
+  </div>
+
+
+
+</nav>
+
+<div class="container mt-5" *ngIf="isHomePage && ok && isAdmin">
+  <div class="card text-center" style="color: green; padding: 20px;">
+    <h1 *ngIf="!showResults ">Sei nella homepage Cerca un cliente tramite la barra o modifica i prodotto tramite l apposita sezione</h1>
+  </div>
+</div>
+
+<div class="container mt-5" *ngIf="!isHomePage">
+  <table class="custom-table" *ngIf="searchResults.length > 0">
+    <tr>
+      <th>Username</th>
+      <th>Nome</th>
+      <th>Cognome</th>
+      <th>Email</th>
+      <th>Numero di telefono</th>
+      <th>Indirizzo</th>
+      <th>Datacreazione</th>
+    </tr>
+    <tr *ngFor="let utente of searchResults">
+      <td>{{ utente.username }}</td>
+      <td>{{ utente.nome }}</td>
+      <td>{{ utente.cognome }}</td>
+      <td>{{ utente.email }}</td>
+      <td>{{ utente.numerotelefono }}</td>
+      <td>{{ utente.address }}</td>
+      <td>{{ utente.datacreazione }}</td>
+    </tr>
+  </table>
+
+  <div *ngIf="searchResults.length === 0">
+    <h2>Nessun utente corrispondente ai criteri di ricerca!</h2>
+  </div>
+</div>
+
+
+
+
+
+
+
+

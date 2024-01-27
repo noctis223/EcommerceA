@@ -1,0 +1,14 @@
+<!-- crea-nuova-tipologia.component.html -->
+<div class="container">
+  <mat-form-field>
+    <mat-label>Tipo</mat-label>
+    <input matInput id="tipoInput" type="text" [(ngModel)]="tipo">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Descrizione</mat-label>
+    <textarea matInput id="descrizioneInput" [(ngModel)]="descrizione" rows="4"></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="creaNuovaTipologia()">Crea nuova tipologia</button>
+</div>

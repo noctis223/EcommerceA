@@ -1,0 +1,75 @@
+.form-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-fields {
+  width: 65%;
+}
+
+.image-container {
+  width: 35%;
+  padding-left: 100px;
+}
+
+.image-container h4 {
+  margin-bottom: 10px;
+}
+
+.prime-form {
+  max-width: 400px;
+  margin-right: 20px;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.form-actions .button-wrapper {
+  margin-right: 10px;
+}
+
+mat.grid-tile {
+ border: 2px solid #eee;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-remove-foto {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: red;
+  color: white;
+  padding: 1px 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 8px;
+  width: 15px;
+  height: auto;
+}
+
+.form-container {
+  margin-bottom: 20px;
+}
+
+.image-container {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.image-upload {
+  margin-bottom: 10px;
+}
+
+/* Rest of the CSS styles */
+

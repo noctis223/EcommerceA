@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="center-container" *ngIf="mostraForm">
+    <h2>ANCORA POCHI PASSI...</h2>
+    <form (ngSubmit)="salvaDatiAggiuntivi()" #form="ngForm">
+      <table>
+        <tr>
+          <td><label for="numerotelefono">Numero di telefono:</label></td>
+          <td><input type="text" id="numerotelefono" name="telefono" [(ngModel)]="numerotelefono" required></td>
+        </tr>
+        <tr>
+          <td><label for="address">Indirizzo:</label></td>
+          <td><input type="text" id="address" name="indirizzo" [(ngModel)]="address" required></td>
+        </tr>
+        <tr>
+          <td><label for="citta">Città:</label></td>
+          <td><input type="text" id="citta" name="citta" [(ngModel)]="citta" required></td>
+        </tr>
+        <tr>
+          <td><label for="cap">CAP:</label></td>
+          <td><input type="text" id="cap" name="cap" [(ngModel)]="cap" required></td>
+        </tr>
+      </table>
+
+      <button type="submit" [disabled]="!form.valid" class="btn-submit">Salva</button>
+    </form>
+  </div>
+
+  <div class="center-container" *ngIf="mostraMessaggio">
+    <h2>Grazie per esserti registrato!</h2>
+    <a mat-raised-button routerLink="">
+      home
+    </a>
+  </div>
+</div>

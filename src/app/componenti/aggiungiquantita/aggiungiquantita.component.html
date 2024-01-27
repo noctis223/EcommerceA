@@ -1,0 +1,19 @@
+<h1 class="title">Setta la Quantità tramite Barcode</h1>
+
+
+<form #formQuantita="ngForm" (ngSubmit)="AggiungiQuantita(formQuantita)" class="form-container">
+  <div class="form-field">
+    <label for="brcodeInput">Barcode:</label>
+    <input type="text" name="brcode" [(ngModel)]="brcode">
+  </div>
+  <div class="form-field">
+    <label for="quantitaInput">Quantità:</label>
+    <input type="number" name="quantita" [(ngModel)]="quantita">
+  </div>
+  <div *ngIf="formQuantita.submitted && formQuantita.controls['quantita'].invalid" class="error-message">
+    Inserisci una quantità valida.
+  </div>
+  <button type="submit" [disabled]="formQuantita.invalid" class="submit-button">Conferma</button>
+</form>
+
+<div *ngIf="confermaAggiuntaQuantita" class="success-message text-center">Quantità aggiunta con successo!</div>

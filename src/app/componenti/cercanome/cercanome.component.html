@@ -1,0 +1,81 @@
+<div>
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Cerca prodotto">
+  <button mat-raised-button color="primary" (click)="showAll()">Cerca</button>
+</div>
+<div *ngIf="prodotti.length > 0; else noProducts">
+
+  <table mat-table [dataSource]="prodotti" class="mat-elevation-z8">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="prezzo">
+      <th mat-header-cell *matHeaderCellDef> Prezzo </th>
+      <td mat-cell *matCellDef="let element"> {{element.prezzo}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="quantita">
+      <th mat-header-cell *matHeaderCellDef> Quantita </th>
+      <td mat-cell *matCellDef="let element"> {{element.quantita}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="brend">
+        <th mat-header-cell *matHeaderCellDef> Marca </th>
+        <td mat-cell *matCellDef="let element"> {{element.brend}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="immagini">
+      <th mat-header-cell *matHeaderCellDef> immagini </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button color="primary" (click)="showimmagine(element)">
+          <mat-icon>images</mat-icon>
+        </button>
+      </td>
+  </ng-container>
+
+    <ng-container matColumnDef="elimina">
+      <th mat-header-cell *matHeaderCellDef> elimina </th>
+      <td mat-cell *matCellDef="let element">
+      <button mat-icon-button color="primary" (click)="eliminaprodotto(element.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+      </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="modifica">
+    <th mat-header-cell *matHeaderCellDef> modifica</th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button color="warn" (click)="editproduct(element.id)">
+      <mat-icon>edit</mat-icon>
+    </button> </td>
+  </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  </div>
+  <ng-template #noProducts>
+    <p>Nessun prodotto disponibile al momento.</p>
+  </ng-template>
+
+  <button mat-raised-button color="primary" (click)="previousPage()" [disabled]="pageNumber === 0">
+    Indietro
+  </button>
+
+  <button mat-raised-button color="primary" (click)="nextPage()" [disabled]="isLastPage()">
+    Avanti
+  </button>
+

@@ -1,0 +1,43 @@
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 mt-3">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> id </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Product Name Column -->
+  <ng-container matColumnDef="buyer">
+    <th mat-header-cell *matHeaderCellDef>  Utente </th>
+    <td mat-cell *matCellDef="let element"> {{element.ordine.buyer.nome}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef>  Email </th>
+    <td mat-cell *matCellDef="let element"> {{element.ordine.buyer.email}} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="ordine">
+    <th mat-header-cell *matHeaderCellDef> Ordine </th>
+    <td mat-cell *matCellDef="let element"> {{ element.ordine.id }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="descrizioneproblema">
+    <th mat-header-cell *matHeaderCellDef> Descrizione</th>
+    <td mat-cell *matCellDef="let element"> {{element.descrizioneproblema}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Chiuso">
+    <th mat-header-cell *matHeaderCellDef> Chiudi </th>
+    <td mat-cell *matCellDef="let element"><button  mat-raised-button color="primary" (click)="Chiudireclamo(element.id)">Chiudi</button> </td>
+  </ng-container>
+
+
+
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

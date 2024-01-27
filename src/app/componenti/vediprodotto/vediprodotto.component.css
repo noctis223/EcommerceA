@@ -1,0 +1,17 @@
+.info-prodotto{
+  font-size: medium;
+}
+
+.image-container{
+  height: 400px;
+  position: relative;
+}
+
+.zoom-image{
+  max-width: 90%;
+  max-height: 90%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}

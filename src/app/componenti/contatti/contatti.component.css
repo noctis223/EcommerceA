@@ -1,0 +1,59 @@
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: white;
+}
+
+.form-container {
+  text-align: center;
+}
+
+.form-title {
+  font-size: 32px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: 2px solid #ccc;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Resto delle regole CSS per il form */
+

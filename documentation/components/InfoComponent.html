@@ -1,0 +1,288 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ecommerce-a documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">ecommerce-a documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  InfoComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/componenti/info/info.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-info</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./info.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./info.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;app-info&#x27;,
+  templateUrl: &#x27;./info.component.html&#x27;,
+  styleUrls: [&#x27;./info.component.css&#x27;]
+})
+export class InfoComponent {
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;about-us&quot;&gt;
+  &lt;h1 class&#x3D;&quot;section-title&quot;&gt;Chi Siamo&lt;/h1&gt;
+
+  &lt;p&gt;Il Bocciuolo sposa nasce nel 1985 a Palmi (RC) in via Concordato snc, ovvero l’attuale sede legale ed operativa del negozio ed è specializzata nella vendita di abiti da sposa, cerimonia e sposo collocandosi in una fascia di mercato di medio-alto livello. Il negozio offre un&#x27;ampia selezione di abiti ed accessori tra cui gemelli, coroncine, cinture, proponendo anche abiti per i bambini e per le occasioni speciali. La struttura del negozio, nonché unica sede dell&#x27;azienda, è moderna e ben mantenuta. Il rispetto delle norme di igiene e sicurezza permette ai propri dipendenti di lavorare in un&#x27;atmosfera accogliente e tranquilla. La struttura possiede anche 3 camerini in cui i clienti possono provare i vestiti e due bagni, il tutto con arredi studiati per mettere a proprio agio i clienti e per offrire un&#x27;esperienza di acquisto di alto livello. Alcuni capi vengono esposti attraverso dei manichini e sono visibili dal cliente finale mentre gli altri capi stanno in un magazzino. Quest’ultimo è ordinato in base al reparto di genere con una sottodivisione in base alla tipologia di capo. Il titolare/socio provvede a sistemare ed ordinare i vari abiti ed eventualmente esporre i capi sui manichini in base all’eventuale moda del momento, i prodotti più richiesti oppure anche per quanto riguarda l&#x27;esposizione dei capi più consoni a seconda del periodo. L&#x27;organizzazione all&#x27;interno del negozio è prevalentemente funzionale. Il personale è formato dalla titolare e fondatrice del negozio Domenica Cotroneo che gestisce principalmente la contabilità interna e la parte amministrativa, e dai due soci, ovvero il fratello e la sorella, che gestiscono il negozio in assenza della proprietaria e forniscono supporto ai clienti nella scelta dei capi guidandoli nella vendita al dettaglio. Questi ultimi inoltre gestiscono la cassa, i contatti con i principali fornitori e l&#x27;inventario degli ordini. Oltre a loro ci sono anche tre sarti che provvedono alla modifica dei capi scelti dai clienti per farli calzare a pennello, un addetto alle pulizie che provvede ogni giorno a pulire i bagni e i camerini e tre addetti alla gestione del magazzino e movimentazione dei manichini e delle merci, carico e scarico oltre alla sistemazione dei vari prodotti negli scaffali appendiabiti. Questi ultimi si occupano anche dell&#x27;esposizione dei manichini muniti di capi spostandoli nelle vetrine. Infine un social-manager provvede alla gestione dei social media e alle pubblicità con post online o volantini e annunci dei nuovi capi.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./info.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.about-us {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 32px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: 2px solid #ccc;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="about-us">  <h1 class="section-title">Chi Siamo</h1>  <p>Il Bocciuolo sposa nasce nel 1985 a Palmi (RC) in via Concordato snc, ovvero l’attuale sede legale ed operativa del negozio ed è specializzata nella vendita di abiti da sposa, cerimonia e sposo collocandosi in una fascia di mercato di medio-alto livello. Il negozio offre un\'ampia selezione di abiti ed accessori tra cui gemelli, coroncine, cinture, proponendo anche abiti per i bambini e per le occasioni speciali. La struttura del negozio, nonché unica sede dell\'azienda, è moderna e ben mantenuta. Il rispetto delle norme di igiene e sicurezza permette ai propri dipendenti di lavorare in un\'atmosfera accogliente e tranquilla. La struttura possiede anche 3 camerini in cui i clienti possono provare i vestiti e due bagni, il tutto con arredi studiati per mettere a proprio agio i clienti e per offrire un\'esperienza di acquisto di alto livello. Alcuni capi vengono esposti attraverso dei manichini e sono visibili dal cliente finale mentre gli altri capi stanno in un magazzino. Quest’ultimo è ordinato in base al reparto di genere con una sottodivisione in base alla tipologia di capo. Il titolare/socio provvede a sistemare ed ordinare i vari abiti ed eventualmente esporre i capi sui manichini in base all’eventuale moda del momento, i prodotti più richiesti oppure anche per quanto riguarda l\'esposizione dei capi più consoni a seconda del periodo. L\'organizzazione all\'interno del negozio è prevalentemente funzionale. Il personale è formato dalla titolare e fondatrice del negozio Domenica Cotroneo che gestisce principalmente la contabilità interna e la parte amministrativa, e dai due soci, ovvero il fratello e la sorella, che gestiscono il negozio in assenza della proprietaria e forniscono supporto ai clienti nella scelta dei capi guidandoli nella vendita al dettaglio. Questi ultimi inoltre gestiscono la cassa, i contatti con i principali fornitori e l\'inventario degli ordini. Oltre a loro ci sono anche tre sarti che provvedono alla modifica dei capi scelti dai clienti per farli calzare a pennello, un addetto alle pulizie che provvede ogni giorno a pulire i bagni e i camerini e tre addetti alla gestione del magazzino e movimentazione dei manichini e delle merci, carico e scarico oltre alla sistemazione dei vari prodotti negli scaffali appendiabiti. Questi ultimi si occupano anche dell\'esposizione dei manichini muniti di capi spostandoli nelle vetrine. Infine un social-manager provvede alla gestione dei social media e alle pubblicità con post online o volantini e annunci dei nuovi capi.</p></div></div>'
+    var COMPONENTS = [{'name': 'AcquistaComponent', 'selector': 'app-acquista'},{'name': 'AggiungiprodottoComponent', 'selector': 'app-aggiungiprodotto'},{'name': 'AggiungiquantitaComponent', 'selector': 'app-aggiungiquantita'},{'name': 'AllordiniComponent', 'selector': 'app-allordini'},{'name': 'AllreclamiComponent', 'selector': 'app-allreclami'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BarraComponent', 'selector': 'app-barra'},{'name': 'CarrelloComponent', 'selector': 'app-carrello'},{'name': 'CercabrcodeComponent', 'selector': 'app-cercabrcode'},{'name': 'CercanomeComponent', 'selector': 'app-cercanome'},{'name': 'CofereclamoComponent', 'selector': 'app-cofereclamo'},{'name': 'CofermaresoComponent', 'selector': 'app-cofermareso'},{'name': 'ConfermacontattoComponent', 'selector': 'app-confermacontatto'},{'name': 'ConfermaordineComponent', 'selector': 'app-confermaordine'},{'name': 'ConfermaprodottoComponent', 'selector': 'app-confermaprodotto'},{'name': 'ConfermareclamoComponent', 'selector': 'app-confermareclamo'},{'name': 'ContattiComponent', 'selector': 'app-contatti'},{'name': 'CreanuovaTipologiaComponent', 'selector': 'app-creanuova-tipologia'},{'name': 'DettagliComponent', 'selector': 'app-dettagli'},{'name': 'ErroreclamoComponent', 'selector': 'app-erroreclamo'},{'name': 'ErroreComponent', 'selector': 'app-errore'},{'name': 'ErroreresoComponent', 'selector': 'app-errorereso'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'InfoComponent', 'selector': 'app-info'},{'name': 'LoginComponent', 'selector': 'app-menu'},{'name': 'LoginDialogComponent', 'selector': 'app-login-dialog'},{'name': 'OrdiniComponent', 'selector': 'app-ordini'},{'name': 'ReclamoComponent', 'selector': 'app-reclamo'},{'name': 'RegistrazioneComponent', 'selector': 'app-registrazione'},{'name': 'ResiComponent', 'selector': 'app-resi'},{'name': 'ShowimmaginedialogComponent', 'selector': 'app-showimmaginedialog'},{'name': 'VediprodottoComponent', 'selector': 'app-vediprodotto'},{'name': 'VisualizzatuttiComponent', 'selector': 'app-visualizzatutti'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'InfoComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'InfoComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

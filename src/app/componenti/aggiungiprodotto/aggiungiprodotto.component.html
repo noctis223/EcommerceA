@@ -1,0 +1,88 @@
+<div class="container mt-5">
+  <div class="card p-2">
+    <div class="form-container">
+      <form #formprodotto="ngForm" (ngSubmit)="addProduct(formprodotto)" #primeForm="ngForm">
+        <div class="form-fields">
+          <mat-form-field class="form-field">
+            <mat-label>Nome Prodotto</mat-label>
+            <input matInput type="text" name="nomeProdotto" [(ngModel)]="prodotto.nome" name="nome" >
+          </mat-form-field>
+          <mat-form-field class="form-field">
+            <mat-label>Quantità</mat-label>
+            <input matInput type="number" name="quantita" [(ngModel)]="prodotto.quantita" name="quantita" min="0">
+          </mat-form-field>
+          <mat-form-field class="form-field">
+            <mat-label>Marca</mat-label>
+            <input matInput type="text" name="marca" [(ngModel)]="prodotto.brend" name="brend">
+          </mat-form-field>
+          <mat-form-field class="form-field">
+            <mat-label>Tipologia</mat-label>
+            <input matInput type="text" name="tipologia" [(ngModel)]="prodotto.tipologia.tipo" name="tipologia.tipo">
+          </mat-form-field>
+          <mat-form-field class="form-field">
+            <mat-label>Prezzo</mat-label>
+            <input matInput type="number" name="prezzo" [(ngModel)]="prodotto.prezzo" name="prezzo" min="1">
+          </mat-form-field>
+          <mat-form-field class="form-field">
+            <mat-label>Genere</mat-label>
+            <input matInput type="text" name="genere" [(ngModel)]="prodotto.genere" name="genere" >
+          </mat-form-field>
+          <mat-form-field class="form-field">
+            <mat-label>Colore</mat-label>
+            <input matInput type="text" name="colore" [(ngModel)]="prodotto.colore" name="colore" >
+          </mat-form-field>
+          <mat-form-field class="form-field">
+            <mat-label>Taglia</mat-label>
+            <input matInput type="text" name="taglia" [(ngModel)]="prodotto.taglia" name="taglia" >
+          </mat-form-field>
+          <mat-form-field class="form-field">
+            <mat-label>Tessuto</mat-label>
+            <input matInput type="text"  name="tessuto" [(ngModel)]="prodotto.tessuto" name="tessuto">
+          </mat-form-field>
+          <mat-form-field class="form-field">
+            <mat-label>fascia di età</mat-label>
+            <input matInput type="text" name="fasciaeta" [(ngModel)]="prodotto.fasciaeta" name="fasciaeta" >
+          </mat-form-field>
+
+
+          <mat-form-field class="form-field">
+            <mat-label>Brcode</mat-label>
+            <input matInput type="text" name="barCode" [(ngModel)]="prodotto.barCode" name="barCode">
+          </mat-form-field>
+          <mat-form-field class="form-field">
+            <mat-label>Descrizione</mat-label>
+            <textarea matInput name="descrizione" rows="4" [(ngModel)]="prodotto.descrizione" name="descrizione"></textarea>
+          </mat-form-field>
+        </div>
+        <div class="form-actions">
+          <div class="button-wrapper" *ngIf="nuovoprodotto">
+            <button mat-raised-button color="primary" type="submit">Aggiungi Prodotto</button>
+          </div>
+          <div class="button-wrapper" *ngIf="!nuovoprodotto">
+            <button mat-raised-button color="primary" type="submit">Aggiorna Prodotto</button>
+          </div>
+          <div class="button-wrapper">
+            <button mat-raised-button color="warn" type="button" (click)="clearForm(formprodotto)">Clear</button>
+          </div>
+        </div>
+
+      </form>
+      <div class="image-container">
+        <div class="image-upload">
+          <input type="file" multiple value="select" #selectfile (change)="onFileSelected($event)">
+        </div>
+        <div class="classefd">
+          <div class="rfes">
+            <mat-grid-list cols="4" rowHeight="1:1" gutterSize="15px">
+              <mat-grid-tile *ngFor="let file of prodotto.immagini; let i = index;">
+                <div class="image-wrapper">
+                  <img [src]="file.url" width="100px" height="100px">
+                  <span class="btn-remove-foto" (click)="removeImage(i)">&times;</span>
+                </div>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

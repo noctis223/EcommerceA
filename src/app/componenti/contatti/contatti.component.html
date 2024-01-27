@@ -1,0 +1,33 @@
+<div class="form-container">
+  <h1 class="form-title">Form di Contatto</h1>
+
+<form class="contact-form">
+
+
+  <div class="form-group">
+    <label for="motivo">Numero ordine:</label>
+    <textarea id="motivo" name="motivo" placeholder="Inserire solo se si ha un problema con un ordine" required></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="cognome">Cognome:</label>
+    <input type="text" id="cognome" name="cognome" placeholder="Inserisci il tuo cognome" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="telefono">Numero di Telefono:</label>
+    <input type="tel" id="telefono" name="telefono" placeholder="Inserisci il tuo numero di telefono" required>
+  </div>
+
+  <div class="form-group">
+    <label for="motivo">Motivo del Contatto:</label>
+    <textarea id="motivo" name="motivo" placeholder="Inserisci il motivo del contatto" required></textarea>
+  </div>
+
+  <button type="submit" routerLink="/confermacontatto">Invia</button>
+</form>

@@ -1,0 +1,10 @@
+<div class="container mt-5">
+  <h2>Inserisci il reclamo</h2>
+  <form [formGroup]="reclamoForm" (ngSubmit)="creareReclamo()">
+    <div class="form-group">
+      <label for="descrizione">Descrizione</label>
+      <textarea class="form-control" id="descrizione" formControlName="descrizione" rows="4"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Invia reclamo</button>
+  </form>
+</div>

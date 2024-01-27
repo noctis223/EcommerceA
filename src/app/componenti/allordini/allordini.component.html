@@ -1,0 +1,44 @@
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 mt-3">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <!-- Product Name Column -->
+    <ng-container matColumnDef="prodotto">
+      <th mat-header-cell *matHeaderCellDef> Prodotti </th>
+      <td mat-cell *matCellDef="let element"> {{element.prodottiacquistati[0]?.prodotto?.nome}} {{element.prodottiacquistati[1]?.prodotto?.nome}} {{element.prodottiacquistati[2]?.prodotto?.nome}} {{element.prodottiacquistati[3]?.prodotto?.nome}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let element"> {{ element.buyer?.nome || 'N/A' }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="indirizzo">
+      <th mat-header-cell *matHeaderCellDef> Indirizzo</th>
+      <td mat-cell *matCellDef="let element"> {{element.buyer.address}} </td>
+    </ng-container>
+
+
+
+     <ng-container matColumnDef="stato">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let element"> {{element.stato}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="spedito">
+        <th mat-header-cell *matHeaderCellDef> Segna Spedito </th>
+        <td mat-cell *matCellDef="let element"><button *ngIf="element.stato == 'Effettuato'" mat-raised-button color="primary" (click)="markAsDelivered(element.id)">Segna Spedito</button> </td>
+      </ng-container>
+
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+

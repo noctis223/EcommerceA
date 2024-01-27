@@ -1,0 +1,2800 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ecommerce-a documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">ecommerce-a documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >KeycloakService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/auth/keycloack.service.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Service to expose existent methods from the Keycloak JS adapter, adding new
+functionalities to improve the use of keycloak in Angular v &gt; 4.3 applications.</p>
+<p>This class should be injected in the application bootstrap, so the same instance will be used
+along the web application.</p>
+
+            </p>
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_authorizationHeaderName" >_authorizationHeaderName</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_bearerPrefix" >_bearerPrefix</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_enableBearerInterceptor" >_enableBearerInterceptor</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_excludedUrls" class="deprecated-name">_excludedUrls</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_instance" >_instance</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_keycloakEvents$" >_keycloakEvents$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_loadUserProfileAtStartUp" >_loadUserProfileAtStartUp</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_silentRefresh" >_silentRefresh</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_updateMinValidity" >_updateMinValidity</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_userProfile" >_userProfile</a>
+                            </li>
+                            <li>
+                                <a href="#shouldAddToken" >shouldAddToken</a>
+                            </li>
+                            <li>
+                                <a href="#shouldUpdateToken" >shouldUpdateToken</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#addTokenToHeader" >addTokenToHeader</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#bindsKeycloakEvents" >bindsKeycloakEvents</a>
+                            </li>
+                            <li>
+                                <a href="#clearToken" >clearToken</a>
+                            </li>
+                            <li>
+                                <a href="#getKeycloakInstance" >getKeycloakInstance</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getToken" >getToken</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getUsername" >getUsername</a>
+                            </li>
+                            <li>
+                                <a href="#getUserRoles" >getUserRoles</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#init" >init</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#initServiceValues" >initServiceValues</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#isLoggedIn" >isLoggedIn</a>
+                            </li>
+                            <li>
+                                <a href="#isTokenExpired" >isTokenExpired</a>
+                            </li>
+                            <li>
+                                <a href="#isUserInRole" >isUserInRole</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#loadExcludedUrls" >loadExcludedUrls</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#loadUserProfile" >loadUserProfile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#login" >login</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#logout" >logout</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#register" >register</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateToken" >updateToken</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#excludedUrls" >excludedUrls</a>
+                                </li>
+                                <li>
+                                    <a href="#enableBearerInterceptor" >enableBearerInterceptor</a>
+                                </li>
+                                <li>
+                                    <a href="#keycloakEvents$" >keycloakEvents$</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addTokenToHeader"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>addTokenToHeader</b></span>
+                        <a href="#addTokenToHeader"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addTokenToHeader(headers: HttpHeaders)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="485"
+                            class="link-to-prism">src/auth/keycloack.service.ts:485</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Adds a valid token in header. The key &amp; value format is:
+Authorization Bearer <token>.
+If the headers param is undefined it will create the Angular headers object.</p>
+<p>Updated header with Authorization and Keycloak token.
+An observable with with the HTTP Authorization header and the current token.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>headers</td>
+                                    <td>
+                                            <code>HttpHeaders</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>new HttpHeaders()</code>
+                                    </td>
+
+                                    <td>
+                                        <p>Updated header with Authorization and Keycloak token.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An observable with with the HTTP Authorization header and the current token.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="bindsKeycloakEvents"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>bindsKeycloakEvents</b></span>
+                        <a href="#bindsKeycloakEvents"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>bindsKeycloakEvents()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="89"
+                            class="link-to-prism">src/auth/keycloack.service.ts:89</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Binds the keycloak-js events to the keycloakEvents Subject
+which is a good way to monitor for changes, if needed.</p>
+<p>The keycloakEvents returns the keycloak-js event type and any
+argument if the source function provides any.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clearToken"></a>
+                    <span class="name">
+                        <span ><b>clearToken</b></span>
+                        <a href="#clearToken"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>clearToken()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="471"
+                            class="link-to-prism">src/auth/keycloack.service.ts:471</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Clear authentication state, including tokens. This can be useful if application
+has detected the session was expired, for example if updating token fails.
+Invoking this results in onAuthLogout callback listener being invoked.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getKeycloakInstance"></a>
+                    <span class="name">
+                        <span ><b>getKeycloakInstance</b></span>
+                        <a href="#getKeycloakInstance"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getKeycloakInstance()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="505"
+                            class="link-to-prism">src/auth/keycloack.service.ts:505</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns the original Keycloak instance, if you need any customization that
+this Angular service does not support yet. Use with caution.</p>
+<p>The KeycloakInstance from keycloak-js.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Keycloak.KeycloakInstance</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>The KeycloakInstance from keycloak-js.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getToken"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>getToken</b></span>
+                        <a href="#getToken"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getToken()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="448"
+                            class="link-to-prism">src/auth/keycloack.service.ts:448</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns the authenticated token, calling updateToken to get a refreshed one if necessary.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getUsername"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getUsername</b></span>
+                        <a href="#getUsername"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getUsername()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="458"
+                            class="link-to-prism">src/auth/keycloack.service.ts:458</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns the logged username.</p>
+<p>The logged username.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>The logged username.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getUserRoles"></a>
+                    <span class="name">
+                        <span ><b>getUserRoles</b></span>
+                        <a href="#getUserRoles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getUserRoles(allRoles: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="341"
+                            class="link-to-prism">src/auth/keycloack.service.ts:341</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Return the roles of the logged user. The allRoles parameter, with default value
+true, will return the clientId and realm roles associated with the logged user. If set to false
+it will only return the user roles associated with the clientId.</p>
+<p>Flag to set if all roles should be returned.(Optional: default value is true)
+Array of Roles associated with the logged user.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>allRoles</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>true</code>
+                                    </td>
+
+                                    <td>
+                                        <p>Flag to set if all roles should be returned.(Optional: default value is true)</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>string[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Array of Roles associated with the logged user.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="init"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>init</b></span>
+                        <a href="#init"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>init(options: <a href="../interfaces/KeycloakOptions.html" target="_self">KeycloakOptions</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="233"
+                            class="link-to-prism">src/auth/keycloack.service.ts:233</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Keycloak initialization. It should be called to initialize the adapter.
+Options is a object with 2 main parameters: config and initOptions. The first one
+will be used to create the Keycloak instance. The second one are options to initialize the
+keycloak instance.</p>
+<p>Config: may be a string representing the keycloak URI or an object with the
+following content:</p>
+<ul>
+<li>url: Keycloak json URL</li>
+<li>realm: realm name</li>
+<li>clientId: client id</li>
+</ul>
+<p>initOptions:
+Options to initialize the Keycloak adapter, matches the options as provided by Keycloak itself.</p>
+<p>enableBearerInterceptor:
+Flag to indicate if the bearer will added to the authorization header.</p>
+<p>loadUserProfileInStartUp:
+Indicates that the user profile should be loaded at the keycloak initialization,
+just after the login.</p>
+<p>bearerExcludedUrls:
+String Array to exclude the urls that should not have the Authorization Header automatically
+added.</p>
+<p>authorizationHeaderName:
+This value will be used as the Authorization Http Header name.</p>
+<p>bearerPrefix:
+This value will be included in the Authorization Http Header param.</p>
+<p>tokenUpdateExcludedHeaders:
+Array of Http Header key/value maps that should not trigger the token to be updated.</p>
+<p>updateMinValidity:
+This value determines if the token will be refreshed based on its expiration time.</p>
+<p>A Promise with a boolean indicating if the initialization was successful.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>options</td>
+                                    <td>
+                                                <code><a href="../interfaces/KeycloakOptions.html" target="_self" >KeycloakOptions</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>{}</code>
+                                    </td>
+
+                                    <td>
+                                        <p>Config: may be a string representing the keycloak URI or an object with the
+following content:</p>
+<ul>
+<li>url: Keycloak json URL</li>
+<li>realm: realm name</li>
+<li>clientId: client id</li>
+</ul>
+<p>initOptions:
+Options to initialize the Keycloak adapter, matches the options as provided by Keycloak itself.</p>
+<p>enableBearerInterceptor:
+Flag to indicate if the bearer will added to the authorization header.</p>
+<p>loadUserProfileInStartUp:
+Indicates that the user profile should be loaded at the keycloak initialization,
+just after the login.</p>
+<p>bearerExcludedUrls:
+String Array to exclude the urls that should not have the Authorization Header automatically
+added.</p>
+<p>authorizationHeaderName:
+This value will be used as the Authorization Http Header name.</p>
+<p>bearerPrefix:
+This value will be included in the Authorization Http Header param.</p>
+<p>tokenUpdateExcludedHeaders:
+Array of Http Header key/value maps that should not trigger the token to be updated.</p>
+<p>updateMinValidity:
+This value determines if the token will be refreshed based on its expiration time.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Promise with a boolean indicating if the initialization was successful.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initServiceValues"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>initServiceValues</b></span>
+                        <a href="#initServiceValues"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>initServiceValues(undefined: <a href="../interfaces/KeycloakOptions.html" target="_self">KeycloakOptions</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="169"
+                            class="link-to-prism">src/auth/keycloack.service.ts:169</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handles the class values initialization.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                                <code><a href="../interfaces/KeycloakOptions.html" target="_self" >KeycloakOptions</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isLoggedIn"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>isLoggedIn</b></span>
+                        <a href="#isLoggedIn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isLoggedIn()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="365"
+                            class="link-to-prism">src/auth/keycloack.service.ts:365</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Check if user is logged in.</p>
+<p>A boolean that indicates if the user is logged in.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A boolean that indicates if the user is logged in.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isTokenExpired"></a>
+                    <span class="name">
+                        <span ><b>isTokenExpired</b></span>
+                        <a href="#isTokenExpired"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isTokenExpired(minValidity: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="382"
+                            class="link-to-prism">src/auth/keycloack.service.ts:382</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns true if the token has less than minValidity seconds left before
+it expires.</p>
+<p>Seconds left. (minValidity) is optional. Default value is 0.
+Boolean indicating if the token is expired.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>minValidity</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>0</code>
+                                    </td>
+
+                                    <td>
+                                        <p>Seconds left. (minValidity) is optional. Default value is 0.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Boolean indicating if the token is expired.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isUserInRole"></a>
+                    <span class="name">
+                        <span ><b>isUserInRole</b></span>
+                        <a href="#isUserInRole"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isUserInRole(role: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, resource?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="322"
+                            class="link-to-prism">src/auth/keycloack.service.ts:322</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Check if the user has access to the specified role. It will look for roles in
+realm and clientId, but will not check if the user is logged in for better performance.</p>
+<p>role name
+resource name If not specified, <code>clientId</code> is used
+A boolean meaning if the user has the specified Role.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>role</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>role name</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>resource</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>resource name If not specified, <code>clientId</code> is used</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A boolean meaning if the user has the specified Role.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadExcludedUrls"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>loadExcludedUrls</b></span>
+                        <a href="#loadExcludedUrls"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>loadExcludedUrls(bearerExcludedUrls: <a href="../interfaces/ExcludedUrl.html" target="_self">(string | ExcludedUrl)[]</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="145"
+                            class="link-to-prism">src/auth/keycloack.service.ts:145</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Loads all bearerExcludedUrl content in a uniform type: ExcludedUrl,
+so it becomes easier to handle.</p>
+<p>the url and HttpMethod.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>bearerExcludedUrls</td>
+                                    <td>
+                                                <code><a href="../interfaces/ExcludedUrl.html" target="_self" >(string | ExcludedUrl)[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>array of strings or ExcludedUrl that includes
+the url and HttpMethod.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>ExcludedUrlRegex[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadUserProfile"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>loadUserProfile</b></span>
+                        <a href="#loadUserProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>loadUserProfile(forceReload)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="431"
+                            class="link-to-prism">src/auth/keycloack.service.ts:431</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Loads the user profile.
+Returns promise to set functions to be invoked if the profile was loaded
+successfully, or if the profile could not be loaded.</p>
+<p>If true will force the loadUserProfile even if its already loaded.
+A promise with the KeycloakProfile data loaded.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>forceReload</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                    <td>
+                                        <p>If true will force the loadUserProfile even if its already loaded.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A promise with the KeycloakProfile data loaded.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="login"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>login</b></span>
+                        <a href="#login"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>login(options: Keycloak.KeycloakLoginOptions)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="270"
+                            class="link-to-prism">src/auth/keycloack.service.ts:270</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Redirects to login form on (options is an optional object with redirectUri and/or
+prompt fields).</p>
+<p>Object, where:</p>
+<ul>
+<li>redirectUri: Specifies the uri to redirect to after login.</li>
+<li>prompt:By default the login screen is displayed if the user is not logged-in to Keycloak.
+To only authenticate to the application if the user is already logged-in and not display the
+login page if the user is not logged-in, set this option to none. To always require
+re-authentication and ignore SSO, set this option to login .</li>
+<li>maxAge: Used just if user is already authenticated. Specifies maximum time since the
+authentication of user happened. If user is already authenticated for longer time than
+maxAge, the SSO is ignored and he will need to re-authenticate again.</li>
+<li>loginHint: Used to pre-fill the username/email field on the login form.</li>
+<li>action: If value is &#39;register&#39; then user is redirected to registration page, otherwise to
+login page.</li>
+<li>locale: Specifies the desired locale for the UI.
+A void Promise if the login is successful and after the user profile loading.</li>
+</ul>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>options</td>
+                                    <td>
+                                            <code>Keycloak.KeycloakLoginOptions</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>{}</code>
+                                    </td>
+
+                                    <td>
+                                        <p>Object, where:</p>
+<ul>
+<li>redirectUri: Specifies the uri to redirect to after login.</li>
+<li>prompt:By default the login screen is displayed if the user is not logged-in to Keycloak.
+To only authenticate to the application if the user is already logged-in and not display the
+login page if the user is not logged-in, set this option to none. To always require
+re-authentication and ignore SSO, set this option to login .</li>
+<li>maxAge: Used just if user is already authenticated. Specifies maximum time since the
+authentication of user happened. If user is already authenticated for longer time than
+maxAge, the SSO is ignored and he will need to re-authenticate again.</li>
+<li>loginHint: Used to pre-fill the username/email field on the login form.</li>
+<li>action: If value is &#39;register&#39; then user is redirected to registration page, otherwise to
+login page.</li>
+<li>locale: Specifies the desired locale for the UI.</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A void Promise if the login is successful and after the user profile loading.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="logout"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>logout</b></span>
+                        <a href="#logout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>logout(redirectUri?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="286"
+                            class="link-to-prism">src/auth/keycloack.service.ts:286</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Redirects to logout.</p>
+<p>Specifies the uri to redirect to after logout.
+A void Promise if the logout was successful, cleaning also the userProfile.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>redirectUri</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>Specifies the uri to redirect to after logout.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A void Promise if the logout was successful, cleaning also the userProfile.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="register"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>register</b></span>
+                        <a href="#register"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>register(options: Keycloak.KeycloakLoginOptions)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="305"
+                            class="link-to-prism">src/auth/keycloack.service.ts:305</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Redirects to registration form. Shortcut for login with option
+action = &#39;register&#39;. Options are same as for the login method but &#39;action&#39; is set to
+&#39;register&#39;.</p>
+<p>login options
+A void Promise if the register flow was successful.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>options</td>
+                                    <td>
+                                            <code>Keycloak.KeycloakLoginOptions</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>{ action: &#x27;register&#x27; }</code>
+                                    </td>
+
+                                    <td>
+                                        <p>login options</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A void Promise if the register flow was successful.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateToken"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>updateToken</b></span>
+                        <a href="#updateToken"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateToken(minValidity)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="397"
+                            class="link-to-prism">src/auth/keycloack.service.ts:397</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>If the token expires within _updateMinValidity seconds the token is refreshed. If the
+session status iframe is enabled, the session status is also checked.
+Returns a promise telling if the token was refreshed or not. If the session is not active
+anymore, the promise is rejected.</p>
+<p>Seconds left. (minValidity is optional, if not specified updateMinValidity - default 20 is used)
+Promise with a boolean indicating if the token was succesfully updated.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>minValidity</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>this._updateMinValidity</code>
+                                    </td>
+
+                                    <td>
+                                        <p>Seconds left. (minValidity is optional, if not specified updateMinValidity - default 20 is used)</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Promise with a boolean indicating if the token was succesfully updated.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_authorizationHeaderName"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_authorizationHeaderName</b></span>
+                        <a href="#_authorizationHeaderName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/auth/keycloack.service.ts:58</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Value that will be used as the Authorization Http Header name.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_bearerPrefix"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_bearerPrefix</b></span>
+                        <a href="#_bearerPrefix"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/auth/keycloack.service.ts:54</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The bearer prefix that will be appended to the Authorization Header.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_enableBearerInterceptor"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_enableBearerInterceptor</b></span>
+                        <a href="#_enableBearerInterceptor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/auth/keycloack.service.ts:40</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Flag to indicate if the bearer will not be added to the authorization header.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_excludedUrls"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span class="deprecated-name"><b>_excludedUrls</b></span>
+                        <a href="#_excludedUrls"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4 deprecated">
+                    The excluded urls patterns that must skip the KeycloakBearerInterceptor.
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>ExcludedUrlRegex[]</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/auth/keycloack.service.ts:63</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The excluded urls patterns that must skip the KeycloakBearerInterceptor.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_instance"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_instance</b></span>
+                        <a href="#_instance"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Keycloak.KeycloakInstance</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/auth/keycloack.service.ts:32</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Keycloak-js instance.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_keycloakEvents$"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_keycloakEvents$</b></span>
+                        <a href="#_keycloakEvents$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/KeycloakEvent.html" target="_self" >Subject&lt;KeycloakEvent&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Subject&lt;KeycloakEvent&gt;()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/auth/keycloack.service.ts:67</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Observer for the keycloak events</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_loadUserProfileAtStartUp"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_loadUserProfileAtStartUp</b></span>
+                        <a href="#_loadUserProfileAtStartUp"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/auth/keycloack.service.ts:50</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Indicates that the user profile should be loaded at the keycloak initialization,
+just after the login.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_silentRefresh"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_silentRefresh</b></span>
+                        <a href="#_silentRefresh"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/auth/keycloack.service.ts:45</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>When the implicit flow is choosen there must exist a silentRefresh, as there is
+no refresh token.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_updateMinValidity"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_updateMinValidity</b></span>
+                        <a href="#_updateMinValidity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/auth/keycloack.service.ts:72</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The amount of required time remaining before expiry of the token before the token will be refreshed.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_userProfile"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_userProfile</b></span>
+                        <a href="#_userProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Keycloak.KeycloakProfile</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/auth/keycloack.service.ts:36</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>User profile as KeycloakProfile interface.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="shouldAddToken"></a>
+                    <span class="name">
+                        <span ><b>shouldAddToken</b></span>
+                        <a href="#shouldAddToken"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/auth/keycloack.service.ts:76</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns true if the request should have the token added to the headers by the KeycloakBearerInterceptor.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="shouldUpdateToken"></a>
+                    <span class="name">
+                        <span ><b>shouldUpdateToken</b></span>
+                        <a href="#shouldUpdateToken"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">src/auth/keycloack.service.ts:80</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns true if the request being made should potentially update the token.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-accessors">
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="excludedUrls"></a>
+                        <span class="name"><b>excludedUrls</b><a href="#excludedUrls"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>excludedUrls()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="517" class="link-to-prism">src/auth/keycloack.service.ts:517</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Returns the excluded URLs that should not be considered by
+the http interceptor which automatically adds the authorization header in the Http Request.</p>
+<p>The excluded urls that must not be intercepted by the KeycloakBearerInterceptor.</p>
+</div>
+
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code>ExcludedUrlRegex[]</code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="enableBearerInterceptor"></a>
+                        <span class="name"><b>enableBearerInterceptor</b><a href="#enableBearerInterceptor"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>enableBearerInterceptor()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="527" class="link-to-prism">src/auth/keycloack.service.ts:527</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Flag to indicate if the bearer will be added to the authorization header.</p>
+<p>Returns if the bearer interceptor was set to be disabled.</p>
+</div>
+
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="keycloakEvents$"></a>
+                        <span class="name"><b>keycloakEvents$</b><a href="#keycloakEvents$"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>keycloakEvents$()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="550" class="link-to-prism">src/auth/keycloack.service.ts:550</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Keycloak subject to monitor the events triggered by keycloak-js.
+The following events as available (as described at keycloak docs -
+<a href="https://www.keycloak.org/docs/latest/securing_apps/index.html#callback-events">https://www.keycloak.org/docs/latest/securing_apps/index.html#callback-events</a>):</p>
+<ul>
+<li>OnAuthError</li>
+<li>OnAuthLogout</li>
+<li>OnAuthRefreshError</li>
+<li>OnAuthRefreshSuccess</li>
+<li>OnAuthSuccess</li>
+<li>OnReady</li>
+<li>OnTokenExpire
+In each occurrence of any of these, this subject will return the event type,
+described at <a href="../miscellaneous/enumerations.html#KeycloakEventType">KeycloakEventType</a> enum and the function args from the keycloak-js
+if provided any.</li>
+</ul>
+<p>A subject with the <a href="../interfaces/KeycloakEvent.html">KeycloakEvent</a> which describes the event type and attaches the
+function args.</p>
+</div>
+
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="../interfaces/KeycloakEvent.html" target="_self" >Subject&lt;KeycloakEvent&gt;</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { HttpHeaders, HttpRequest } from &#x27;@angular/common/http&#x27;;
+
+import { Subject, from } from &#x27;rxjs&#x27;;
+import { map } from &#x27;rxjs/operators&#x27;;
+import Keycloak from &#x27;keycloak-js&#x27;;
+import { KeycloakEvent, KeycloakEventType } from &#x27;keycloak-angular/lib/core/interfaces/keycloak-event&#x27;;
+import { ExcludedUrl, ExcludedUrlRegex } from &#x27;./keycloack-options&#x27;;
+import { KeycloakOptions } from &#x27;keycloak-angular/lib/core/interfaces/keycloak-options&#x27;;
+
+
+/**
+ * Service to expose existent methods from the Keycloak JS adapter, adding new
+ * functionalities to improve the use of keycloak in Angular v &gt; 4.3 applications.
+ *
+ * This class should be injected in the application bootstrap, so the same instance will be used
+ * along the web application.
+ */
+@Injectable()
+export class KeycloakService {
+  /**
+   * Keycloak-js instance.
+   */
+  private _instance: Keycloak.KeycloakInstance;
+  /**
+   * User profile as KeycloakProfile interface.
+   */
+  private _userProfile: Keycloak.KeycloakProfile;
+  /**
+   * Flag to indicate if the bearer will not be added to the authorization header.
+   */
+  private _enableBearerInterceptor: boolean;
+  /**
+   * When the implicit flow is choosen there must exist a silentRefresh, as there is
+   * no refresh token.
+   */
+  private _silentRefresh: boolean;
+  /**
+   * Indicates that the user profile should be loaded at the keycloak initialization,
+   * just after the login.
+   */
+  private _loadUserProfileAtStartUp: boolean;
+  /**
+   * The bearer prefix that will be appended to the Authorization Header.
+   */
+  private _bearerPrefix: string;
+  /**
+   * Value that will be used as the Authorization Http Header name.
+   */
+  private _authorizationHeaderName: string;
+  /**
+   * @deprecated
+   * The excluded urls patterns that must skip the KeycloakBearerInterceptor.
+   */
+  private _excludedUrls: ExcludedUrlRegex[];
+  /**
+   * Observer for the keycloak events
+   */
+  private _keycloakEvents$: Subject&lt;KeycloakEvent&gt; &#x3D;
+    new Subject&lt;KeycloakEvent&gt;();
+  /**
+   * The amount of required time remaining before expiry of the token before the token will be refreshed.
+   */
+  private _updateMinValidity: number;
+  /**
+   * Returns true if the request should have the token added to the headers by the KeycloakBearerInterceptor.
+   */
+  shouldAddToken: (request: HttpRequest&lt;unknown&gt;) &#x3D;&gt; boolean;
+  /**
+   * Returns true if the request being made should potentially update the token.
+   */
+  shouldUpdateToken: (request: HttpRequest&lt;unknown&gt;) &#x3D;&gt; boolean;
+
+  /**
+   * Binds the keycloak-js events to the keycloakEvents Subject
+   * which is a good way to monitor for changes, if needed.
+   *
+   * The keycloakEvents returns the keycloak-js event type and any
+   * argument if the source function provides any.
+   */
+  private bindsKeycloakEvents(): void {
+    this._instance.onAuthError &#x3D; (errorData) &#x3D;&gt; {
+      this._keycloakEvents$.next({
+        args: errorData,
+        type: KeycloakEventType.OnAuthError
+      });
+    };
+
+    this._instance.onAuthLogout &#x3D; () &#x3D;&gt; {
+      this._keycloakEvents$.next({ type: KeycloakEventType.OnAuthLogout });
+    };
+
+    this._instance.onAuthRefreshSuccess &#x3D; () &#x3D;&gt; {
+      this._keycloakEvents$.next({
+        type: KeycloakEventType.OnAuthRefreshSuccess
+      });
+    };
+
+    this._instance.onAuthRefreshError &#x3D; () &#x3D;&gt; {
+      this._keycloakEvents$.next({
+        type: KeycloakEventType.OnAuthRefreshError
+      });
+    };
+
+    this._instance.onAuthSuccess &#x3D; () &#x3D;&gt; {
+      this._keycloakEvents$.next({ type: KeycloakEventType.OnAuthSuccess });
+    };
+
+    this._instance.onTokenExpired &#x3D; () &#x3D;&gt; {
+      this._keycloakEvents$.next({
+        type: KeycloakEventType.OnTokenExpired
+      });
+    };
+
+    this._instance.onActionUpdate &#x3D; (state) &#x3D;&gt; {
+      this._keycloakEvents$.next({
+        args: state,
+        type: KeycloakEventType.OnActionUpdate
+      });
+    };
+
+    this._instance.onReady &#x3D; (authenticated) &#x3D;&gt; {
+      this._keycloakEvents$.next({
+        args: authenticated,
+        type: KeycloakEventType.OnReady
+      });
+    };
+  }
+
+  /**
+   * Loads all bearerExcludedUrl content in a uniform type: ExcludedUrl,
+   * so it becomes easier to handle.
+   *
+   * @param bearerExcludedUrls array of strings or ExcludedUrl that includes
+   * the url and HttpMethod.
+   */
+  private loadExcludedUrls(
+    bearerExcludedUrls: (string | ExcludedUrl)[]
+  ): ExcludedUrlRegex[] {
+    const excludedUrls: ExcludedUrlRegex[] &#x3D; [];
+    for (const item of bearerExcludedUrls) {
+      let excludedUrl: ExcludedUrlRegex;
+      if (typeof item &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
+        excludedUrl &#x3D; { urlPattern: new RegExp(item, &#x27;i&#x27;), httpMethods: [] };
+      } else {
+        excludedUrl &#x3D; {
+          urlPattern: new RegExp(item.url, &#x27;i&#x27;),
+          httpMethods: item.httpMethods
+        };
+      }
+      excludedUrls.push(excludedUrl);
+    }
+    return excludedUrls;
+  }
+
+  /**
+   * Handles the class values initialization.
+   *
+   * @param options
+   */
+  private initServiceValues({
+    enableBearerInterceptor &#x3D; true,
+    loadUserProfileAtStartUp &#x3D; false,
+    bearerExcludedUrls &#x3D; [],
+    authorizationHeaderName &#x3D; &#x27;Authorization&#x27;,
+    bearerPrefix &#x3D; &#x27;Bearer&#x27;,
+    initOptions,
+    updateMinValidity &#x3D; 20,
+    shouldAddToken &#x3D; () &#x3D;&gt; true,
+    shouldUpdateToken &#x3D; () &#x3D;&gt; true
+  }: KeycloakOptions): void {
+    this._enableBearerInterceptor &#x3D; enableBearerInterceptor;
+    this._loadUserProfileAtStartUp &#x3D; loadUserProfileAtStartUp;
+    this._authorizationHeaderName &#x3D; authorizationHeaderName;
+    this._bearerPrefix &#x3D; bearerPrefix.trim().concat(&#x27; &#x27;);
+    this._excludedUrls &#x3D; this.loadExcludedUrls(bearerExcludedUrls);
+    this._silentRefresh &#x3D; initOptions ? initOptions.flow &#x3D;&#x3D;&#x3D; &#x27;implicit&#x27; : false;
+    this._updateMinValidity &#x3D; updateMinValidity;
+    this.shouldAddToken &#x3D; shouldAddToken;
+    this.shouldUpdateToken &#x3D; shouldUpdateToken;
+  }
+
+  /**
+   * Keycloak initialization. It should be called to initialize the adapter.
+   * Options is a object with 2 main parameters: config and initOptions. The first one
+   * will be used to create the Keycloak instance. The second one are options to initialize the
+   * keycloak instance.
+   *
+   * @param options
+   * Config: may be a string representing the keycloak URI or an object with the
+   * following content:
+   * - url: Keycloak json URL
+   * - realm: realm name
+   * - clientId: client id
+   *
+   * initOptions:
+   * Options to initialize the Keycloak adapter, matches the options as provided by Keycloak itself.
+   *
+   * enableBearerInterceptor:
+   * Flag to indicate if the bearer will added to the authorization header.
+   *
+   * loadUserProfileInStartUp:
+   * Indicates that the user profile should be loaded at the keycloak initialization,
+   * just after the login.
+   *
+   * bearerExcludedUrls:
+   * String Array to exclude the urls that should not have the Authorization Header automatically
+   * added.
+   *
+   * authorizationHeaderName:
+   * This value will be used as the Authorization Http Header name.
+   *
+   * bearerPrefix:
+   * This value will be included in the Authorization Http Header param.
+   *
+   * tokenUpdateExcludedHeaders:
+   * Array of Http Header key/value maps that should not trigger the token to be updated.
+   *
+   * updateMinValidity:
+   * This value determines if the token will be refreshed based on its expiration time.
+   *
+   * @returns
+   * A Promise with a boolean indicating if the initialization was successful.
+   */
+  public async init(options: KeycloakOptions &#x3D; {}) {
+    this.initServiceValues(options);
+    const { config, initOptions } &#x3D; options;
+
+    this._instance &#x3D; new Keycloak(config);
+    this.bindsKeycloakEvents();
+
+    const authenticated &#x3D; await this._instance.init(initOptions);
+
+    if (authenticated &amp;&amp; this._loadUserProfileAtStartUp) {
+      await this.loadUserProfile();
+    }
+
+    return authenticated;
+  }
+
+  /**
+   * Redirects to login form on (options is an optional object with redirectUri and/or
+   * prompt fields).
+   *
+   * @param options
+   * Object, where:
+   *  - redirectUri: Specifies the uri to redirect to after login.
+   *  - prompt:By default the login screen is displayed if the user is not logged-in to Keycloak.
+   * To only authenticate to the application if the user is already logged-in and not display the
+   * login page if the user is not logged-in, set this option to none. To always require
+   * re-authentication and ignore SSO, set this option to login .
+   *  - maxAge: Used just if user is already authenticated. Specifies maximum time since the
+   * authentication of user happened. If user is already authenticated for longer time than
+   * maxAge, the SSO is ignored and he will need to re-authenticate again.
+   *  - loginHint: Used to pre-fill the username/email field on the login form.
+   *  - action: If value is &#x27;register&#x27; then user is redirected to registration page, otherwise to
+   * login page.
+   *  - locale: Specifies the desired locale for the UI.
+   * @returns
+   * A void Promise if the login is successful and after the user profile loading.
+   */
+  public async login(options: Keycloak.KeycloakLoginOptions &#x3D; {}) {
+    await this._instance.login(options);
+
+    if (this._loadUserProfileAtStartUp) {
+      await this.loadUserProfile();
+    }
+  }
+
+  /**
+   * Redirects to logout.
+   *
+   * @param redirectUri
+   * Specifies the uri to redirect to after logout.
+   * @returns
+   * A void Promise if the logout was successful, cleaning also the userProfile.
+   */
+  public async logout(redirectUri?: string) {
+    const options &#x3D; {
+      redirectUri
+    };
+
+    await this._instance.logout(options);
+    this._userProfile &#x3D; undefined;
+  }
+
+  /**
+   * Redirects to registration form. Shortcut for login with option
+   * action &#x3D; &#x27;register&#x27;. Options are same as for the login method but &#x27;action&#x27; is set to
+   * &#x27;register&#x27;.
+   *
+   * @param options
+   * login options
+   * @returns
+   * A void Promise if the register flow was successful.
+   */
+  public async register(
+    options: Keycloak.KeycloakLoginOptions &#x3D; { action: &#x27;register&#x27; }
+  ) {
+    await this._instance.register(options);
+  }
+
+  /**
+   * Check if the user has access to the specified role. It will look for roles in
+   * realm and clientId, but will not check if the user is logged in for better performance.
+   *
+   * @param role
+   * role name
+   * @param resource
+   * resource name If not specified, &#x60;clientId&#x60; is used
+   * @returns
+   * A boolean meaning if the user has the specified Role.
+   */
+  isUserInRole(role: string, resource?: string): boolean {
+    let hasRole: boolean;
+    hasRole &#x3D; this._instance.hasResourceRole(role, resource);
+    if (!hasRole) {
+      hasRole &#x3D; this._instance.hasRealmRole(role);
+    }
+    return hasRole;
+  }
+
+  /**
+   * Return the roles of the logged user. The allRoles parameter, with default value
+   * true, will return the clientId and realm roles associated with the logged user. If set to false
+   * it will only return the user roles associated with the clientId.
+   *
+   * @param allRoles
+   * Flag to set if all roles should be returned.(Optional: default value is true)
+   * @returns
+   * Array of Roles associated with the logged user.
+   */
+  getUserRoles(allRoles: boolean &#x3D; true): string[] {
+    let roles: string[] &#x3D; [];
+    if (this._instance.resourceAccess) {
+      for (const key in this._instance.resourceAccess) {
+        if (this._instance.resourceAccess.hasOwnProperty(key)) {
+          const resourceAccess &#x3D; this._instance.resourceAccess[key];
+          const clientRoles &#x3D; resourceAccess[&#x27;roles&#x27;] || [];
+          roles &#x3D; roles.concat(clientRoles);
+        }
+      }
+    }
+    if (allRoles &amp;&amp; this._instance.realmAccess) {
+      const realmRoles &#x3D; this._instance.realmAccess[&#x27;roles&#x27;] || [];
+      roles.push(...realmRoles);
+    }
+    return roles;
+  }
+
+  /**
+   * Check if user is logged in.
+   *
+   * @returns
+   * A boolean that indicates if the user is logged in.
+   */
+  async isLoggedIn(): Promise&lt;boolean&gt; {
+    if (!this._instance) {
+      return false;
+    }
+
+    return this._instance.authenticated;
+  }
+
+  /**
+   * Returns true if the token has less than minValidity seconds left before
+   * it expires.
+   *
+   * @param minValidity
+   * Seconds left. (minValidity) is optional. Default value is 0.
+   * @returns
+   * Boolean indicating if the token is expired.
+   */
+  isTokenExpired(minValidity: number &#x3D; 0): boolean {
+    return this._instance.isTokenExpired(minValidity);
+  }
+
+  /**
+   * If the token expires within _updateMinValidity seconds the token is refreshed. If the
+   * session status iframe is enabled, the session status is also checked.
+   * Returns a promise telling if the token was refreshed or not. If the session is not active
+   * anymore, the promise is rejected.
+   *
+   * @param minValidity
+   * Seconds left. (minValidity is optional, if not specified updateMinValidity - default 20 is used)
+   * @returns
+   * Promise with a boolean indicating if the token was succesfully updated.
+   */
+  public async updateToken(minValidity &#x3D; this._updateMinValidity) {
+    // TODO: this is a workaround until the silent refresh (issue #43)
+    // is not implemented, avoiding the redirect loop.
+    if (this._silentRefresh) {
+      if (this.isTokenExpired()) {
+        throw new Error(
+          &#x27;Failed to refresh the token, or the session is expired&#x27;
+        );
+      }
+
+      return true;
+    }
+
+    if (!this._instance) {
+      throw new Error(&#x27;Keycloak Angular library is not initialized.&#x27;);
+    }
+
+    try {
+      return await this._instance.updateToken(minValidity);
+    } catch (error) {
+      return false;
+    }
+  }
+
+  /**
+   * Loads the user profile.
+   * Returns promise to set functions to be invoked if the profile was loaded
+   * successfully, or if the profile could not be loaded.
+   *
+   * @param forceReload
+   * If true will force the loadUserProfile even if its already loaded.
+   * @returns
+   * A promise with the KeycloakProfile data loaded.
+   */
+  public async loadUserProfile(forceReload &#x3D; false) {
+    if (this._userProfile &amp;&amp; !forceReload) {
+      return this._userProfile;
+    }
+
+    if (!this._instance.authenticated) {
+      throw new Error(
+        &#x27;The user profile was not loaded as the user is not logged in.&#x27;
+      );
+    }
+
+    return (this._userProfile &#x3D; await this._instance.loadUserProfile());
+  }
+
+  /**
+   * Returns the authenticated token, calling updateToken to get a refreshed one if necessary.
+   */
+  public async getToken() {
+    return this._instance.token;
+  }
+
+  /**
+   * Returns the logged username.
+   *
+   * @returns
+   * The logged username.
+   */
+  public getUsername() {
+    if (!this._userProfile) {
+      throw new Error(&#x27;User not logged in or user profile was not loaded.&#x27;);
+    }
+
+    return this._userProfile.username;
+  }
+
+  /**
+   * Clear authentication state, including tokens. This can be useful if application
+   * has detected the session was expired, for example if updating token fails.
+   * Invoking this results in onAuthLogout callback listener being invoked.
+   */
+  clearToken(): void {
+    this._instance.clearToken();
+  }
+
+  /**
+   * Adds a valid token in header. The key &amp; value format is:
+   * Authorization Bearer &lt;token&gt;.
+   * If the headers param is undefined it will create the Angular headers object.
+   *
+   * @param headers
+   * Updated header with Authorization and Keycloak token.
+   * @returns
+   * An observable with with the HTTP Authorization header and the current token.
+   */
+  public addTokenToHeader(headers: HttpHeaders &#x3D; new HttpHeaders()) {
+    return from(this.getToken()).pipe(
+      map((token) &#x3D;&gt;
+        token
+          ? headers.set(
+              this._authorizationHeaderName,
+              this._bearerPrefix + token
+            )
+          : headers
+      )
+    );
+  }
+
+  /**
+   * Returns the original Keycloak instance, if you need any customization that
+   * this Angular service does not support yet. Use with caution.
+   *
+   * @returns
+   * The KeycloakInstance from keycloak-js.
+   */
+  getKeycloakInstance(): Keycloak.KeycloakInstance {
+    return this._instance;
+  }
+
+  /**
+   * @deprecated
+   * Returns the excluded URLs that should not be considered by
+   * the http interceptor which automatically adds the authorization header in the Http Request.
+   *
+   * @returns
+   * The excluded urls that must not be intercepted by the KeycloakBearerInterceptor.
+   */
+  get excludedUrls(): ExcludedUrlRegex[] {
+    return this._excludedUrls;
+  }
+
+  /**
+   * Flag to indicate if the bearer will be added to the authorization header.
+   *
+   * @returns
+   * Returns if the bearer interceptor was set to be disabled.
+   */
+  get enableBearerInterceptor(): boolean {
+    return this._enableBearerInterceptor;
+  }
+
+  /**
+   * Keycloak subject to monitor the events triggered by keycloak-js.
+   * The following events as available (as described at keycloak docs -
+   * https://www.keycloak.org/docs/latest/securing_apps/index.html#callback-events):
+   * - OnAuthError
+   * - OnAuthLogout
+   * - OnAuthRefreshError
+   * - OnAuthRefreshSuccess
+   * - OnAuthSuccess
+   * - OnReady
+   * - OnTokenExpire
+   * In each occurrence of any of these, this subject will return the event type,
+   * described at {@link KeycloakEventType} enum and the function args from the keycloak-js
+   * if provided any.
+   *
+   * @returns
+   * A subject with the {@link KeycloakEvent} which describes the event type and attaches the
+   * function args.
+   */
+  get keycloakEvents$(): Subject&lt;KeycloakEvent&gt; {
+    return this._keycloakEvents$;
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'KeycloakService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
